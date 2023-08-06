@@ -516,15 +516,7 @@ getValue:
                                             ; }                              //    |
     jmp .loop                               ;                                //    |
                                             ;                                //    |
-    .indexOutOfRange:
-    push 0                       ;                                //    |
-    push 0x65676E617220666F
-    push 0x2074756F20786564
-    push 0x6E4920726F727245
-
-    mov rdi, rsp
-    call print_string
-
+    .indexOutOfRange:                       ;                                //    |
     mov rax, 60                             ;                                //    |
     mov rdi, 1                              ;                                //    |
     syscall                                 ; exit(1); // <------------------------+
